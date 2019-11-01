@@ -1,0 +1,84 @@
+.card {
+	padding: 0 24px;
+
+	@include mq("sp") {
+		padding: 0 16px;
+	}
+
+	&-heading {
+		margin-left: 69px;
+    padding: 37px 0 54px;
+
+		@include font-size(3.6rem, 3rem);
+		font-weight: bold;
+
+		@include mq("tab") {
+			margin-left: 0;
+		}
+
+    //左線短め見出し
+		padding-left: 0.7em;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 6px;
+			height: 0.70em;
+			background-color: $cr-m;
+		}
+	}
+
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-bottom: 110px;
+		width: 1180px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	&-wrap {
+		width: calc(33.33333% - 10rem / 3);
+		margin: 0 5rem 5rem 0;
+		padding: 20px;
+		box-shadow: 0px 0px 5px #11334833;
+		border-radius: 8px;
+		transition: all 0.3s ease 0s;
+		text-decoration: none;
+
+		&:hover {
+			opacity: $opacity;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		@include mq("tab") {
+			width: calc(50% - 5rem / 2);
+			margin: 0 5rem 5rem 0;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		@include mq("sp") {
+			width: 100%;
+			margin: 0 0 5rem 0;
+		}
+	}
+
+	&-img {
+		margin-bottom: 18px;
+		text-align: center;
+	}
+
+	&-title {
+		@include font-size(1.6rem, 1.4rem);
+	}
+}

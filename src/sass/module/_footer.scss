@@ -1,0 +1,19 @@
+.footer {
+	background: #B3B3B3;
+	width: 100%;
+	padding: 18px 0 27px;
+
+	@include mq("tab") {
+		padding: 18px 150px;
+	}
+	@include mq("sp") {
+		padding: 18px 50px;
+	}
+
+	&-copyright {
+		font-size: 1.2rem;
+		color: #707070;
+		text-align: center;
+		padding-right: 33px;
+	}
+}
